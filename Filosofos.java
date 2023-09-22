@@ -24,9 +24,9 @@ public class Filosofos implements Runnable {
         try{
             while (isRunning) {
                 // pensando
-                // acao("Filóso: "+ getId() + ": Pensando");
+                acao("Filóso: "+ getId() + ": Pensando");
                 synchronized (garfoEsquerdo) {
-                    // acao("Filóso: "+ getId() + ": Pegou garfo esquerdo");
+                    acao("Filóso: "+ getId() + ": Pegou garfo esquerdo");
                     synchronized (garfoDireito) {
                         // comendo
                         acao("Filósofo: "+ getId() + ": Pegou garfo direito - comendo"); 
@@ -34,7 +34,7 @@ public class Filosofos implements Runnable {
                         int rand = random.nextInt(3)+1;
                         Thread.sleep(rand * 1000);
 
-                        // acao("Filóso: "+ getId() + ": Largou garfo direito");
+                        acao("Filóso: "+ getId() + ": Largou garfo direito");
                     }
                     // pensando de novo
                     acao("Filósofo: "+ getId() + ": Largou garfo esquerdo, pensando de novo");
@@ -52,7 +52,7 @@ public class Filosofos implements Runnable {
     }
 
     private void acao(String acao) throws InterruptedException{
-        System.out.println(acao);
+        // System.out.println(acao);
         Thread.sleep(((int)(Math.random() * 100)));
     }
     public int getContadorComida() {

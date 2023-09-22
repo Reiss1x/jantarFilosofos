@@ -28,26 +28,27 @@ public class App {
            thread.start();
         }
         
-        Thread timer = new Thread(() -> {
         try {
             Thread.sleep(20000);
-
-            
-        } catch (Exception e) {
-                Thread.currentThread().interrupt();
+            for(Filosofos os : fils){
+                os.parar();
             }
-        });
-        
-        timer.start();
-           
-    }
+            for(Filosofos os : fils){
+                os.join();
+            }
+            Thread.sleep(5000);
+
+        } catch (Exception e) {
+            Thread.currentThread().interrupt();
+        }
+        imprimirContagemComida(fils);
+    };
 
     private static void imprimirContagemComida(Filosofos[] filosofos) {
         for (int i = 0; i < filosofos.length; i++) {
             System.out.println("Filósofo " + (i + 1) + " comeu " + filosofos[i].getContadorComida() + " vezes.");
         }
-        
-        
+            
+            
     }
-
 }

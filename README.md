@@ -1,9 +1,10 @@
-Pontifícia Universidade Católica do Rio Grande do Sul
-Escola Politécnica
 Fundamentos de Proc. Paralelo e Distribuídos
 Prof. Marcelo Veiga Neves
 Trabalho 1 – Jantar dos Filósofos
+
+
 Descrição:
+
 Como vimos em aula, o problema do jantar dos filósofos foi originalmente
 formulado por Dijkstra em 1965 e é usado frequentemente para exemplificar
 problemas de concorrência relacionados ao acesso a recursos. Nele, cinco
@@ -16,6 +17,8 @@ filósofos pensarem ao mesmo tempo e depois comerem ao mesmo).
 Neste trabalho, o desafio é apresentar duas soluções concorrentes para o
 problema, descrever e explicar o seu funcionamento, mostrar sua execução em
 uma máquina com várias núcleos e analisar como se comparam em relação:
+
+
 1. ao funcionamento geral da solução;
 2. aos mecanismos usados na sincronização;
 3. como estes mecanismos são implementados na linguagem escolhida;
@@ -33,24 +36,3 @@ com mais de um core para que seja possível a análise de concorrência física.
 Para fins de comparação, deve ser desenvolvida pelo grupo uma versão
 sequencial onde os filósofos pensam e comem em sequência, um depois do
 outro, para ser usada como baseline para as versões concorrentes.
-A avaliação do trabalho será feita com base no acompanhamento do
-desenvolvimento do trabalho em laboratório e no envio de um relatório técnico
-no moodle que atenda as questões enumeradas acima.
-Formato do relatório técnico:
- arquivo formato .pdf;
- cabeçalho reduzido com identificação do grupo e do trabalho;
- primeira página coluna dupla com margens reduzidas (1cm) e fonte 10;
- segunda página com dumps de tela mostrando a execução dos
-programas em funcionamento;
- a partir da terceira página código fonte formatado em coluna simples dos
-programas utilizados no trabalho (sem limite).
-Grupos:
-O trabalho pode ser realizado em grupos de até 3 integrantes. É
-responsabilidade dos alunos formarem os grupos, que devem ser
-organizados/cadastrados na ferramenta do Moodle (Auto-seleção de grupos).
-Entrega:
-Submeter o reletório, todo o código fonte desenvolvido e um documento com
-instruções de compilação e uso na forma de um arquivo .zip, no seguinte
-padrão de nome T1_NomeAluno1NomeAluno2.zip, na sala de entrega do
-Moodle.
-O prazo limite para entrega está definida na atividade do Moodle.
